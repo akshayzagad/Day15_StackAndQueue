@@ -1,6 +1,6 @@
 package com.bridgelabz;
 
-public class LinkedList <T> {
+public class LinkedList<T> {
     Node<T> head;
     Node<T> tail;
     private int count;
@@ -54,15 +54,16 @@ public class LinkedList <T> {
 
     public void deleteLastNode() {
         if (head == null) {
-            System.out.println("linkList is null");
+            System.out.println("List is empty");
+
+        } else {
+
+            if (head != tail) {
+                head = head.next;
+            } else {
+                head = tail = null;
+            }
         }
-        Node secondLast = head;
-        Node lastNode = head.next;
-        while (lastNode.next != null) {
-            lastNode = lastNode.next;
-            secondLast = secondLast.next;
-        }
-        secondLast.next = null;
     }
 
     public Node<T> searchNode(T key) {
