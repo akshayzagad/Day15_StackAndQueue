@@ -2,6 +2,7 @@ package com.bridgelabz;
 
 public class StackMain<T> {
     public static void main(String[] args) {
+        System.out.println("Welcome to stack programme");
         Stack crateStack = new Stack();
         System.out.println("Add data to create stack");
         crateStack.push(70);
